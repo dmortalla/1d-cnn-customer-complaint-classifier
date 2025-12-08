@@ -32,3 +32,41 @@ python train_1d_cnn.py
 
 train_1d_cnn.py
 requirements.txt
+```
+
+---
+
+```md
+---
+
+## 🧱 Architecture Overview
+
+```text
+Input: [batch_size, seq_len] token IDs
+        |
+        v
+Embedding layer -> [batch, seq_len, embed_dim]
+        |
+ Transpose to [batch, embed_dim, seq_len]
+        |
+        v
+ Conv1d (kernel=3, padding=1) + ReLU
+        |
+        v
+ Conv1d (kernel=5, padding=2) + ReLU
+        |
+        v
+ AdaptiveMaxPool1d(output_size=1)
+        |
+        v
+  Flatten -> [batch, 128]
+        |
+        v
+   Dropout(0.3)
+        |
+        v
+  Fully-connected layer -> [batch, num_classes]
+
+
+## 📜 License
+This project is licensed under the MIT License — see the LICENSE file for details.
