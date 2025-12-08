@@ -29,3 +29,6 @@ This architecture is fast, lightweight, and ideal for sequence pattern extractio
 ```bash
 pip install -r requirements.txt
 python train_1d_cnn.py
+
+train_1d_cnn.py
+requirements.txt
