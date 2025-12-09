@@ -8,16 +8,35 @@
 
 > A PyTorch-based 1D Convolutional Neural Network for real-world text classification tasks. Includes tokenization, padded sequence handling, GPU-accelerated training, performance evaluation, and reproducible preprocessing utilities.
 
----
+## 🚀 Quickstart Demo (For Reviewers)
 
-## 🚀 Quickstart Demo
+Run a simple inference example using sample text:
 
 ```bash
 pip install -r requirements.txt
-python run_demo.py
+python demo_predict.py
 ```
 
-Runs an end-to-end example using a sample complaint for inference.
+This confirms preprocessing, embedding, convolutional feature extraction, and classifier output.
+
+---
+
+## 📦 Full Training Run
+
+Train the full 1D-CNN model:
+
+```bash
+python train_cnn_classifier.py
+```
+
+This script handles:
+
+- Tokenization + vocabulary  
+- Sequence batching  
+- CNN feature extraction  
+- Classification head training  
+- Train/validation split  
+- Accuracy reporting  
 
 ---
 
@@ -25,7 +44,7 @@ Runs an end-to-end example using a sample complaint for inference.
 
 ```text
 train_cnn_classifier.py   # Full supervised training script
-run_demo.py               # Sample inference demo
+run_demo.py               # Example inference demo
 requirements.txt          # Dependencies
 ```
 
@@ -33,13 +52,12 @@ requirements.txt          # Dependencies
 
 ## 🏗 Overview
 
-- Token embedding layer  
-- 1D convolutional feature extractor  
-- Global max pooling layer  
-- Fully connected classification head  
-- Cross-entropy loss + accuracy tracking  
+- Token Embedding → Conv1D → Global Max Pool → Linear Classifier  
+- Efficient for short-to-medium text sequences  
+- Demonstrates convolutional NLP modeling  
+- Fast training even on CPU  
 
-This design balances speed, simplicity, and performance for text classification.
+This architecture is commonly used for sentiment analysis and short-text classification.
 
 ---
 
@@ -50,7 +68,8 @@ This design balances speed, simplicity, and performance for text classification.
 ├── train_cnn_classifier.py
 ├── run_demo.py
 ├── requirements.txt
-└── CONTRIBUTING.md
+├── CONTRIBUTING.md
+└── SECURITY.md
 ```
 
 ---
@@ -113,9 +132,10 @@ Embedding layer -> [batch, seq_len, embed_dim]
 ---
 
 ## 🤝 Contributing
-See CONTRIBUTING.md for guidelines on code style and submitting pull requests.
+See `CONTRIBUTING.md` for coding style, branching strategy, and PR workflow.
 
 ---
 
 ## 📄 License
 MIT License. See `LICENSE` for details.
+
