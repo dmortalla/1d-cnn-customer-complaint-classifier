@@ -26,7 +26,7 @@ This confirms preprocessing, embedding, convolutional feature extraction, and cl
 Train the full 1D-CNN model:
 
 ```bash
-python train_cnn_classifier.py
+python train_1d_cnn.py
 ```
 
 This script handles:
@@ -43,7 +43,7 @@ This script handles:
 ## 📁 Files
 
 ```text
-train_cnn_classifier.py   # Full supervised training script
+train_1d_cnn.py   # Full supervised training script
 run_demo.py               # Example inference demo
 requirements.txt          # Dependencies
 ```
