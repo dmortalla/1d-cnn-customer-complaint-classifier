@@ -24,7 +24,7 @@ This architecture is fast, lightweight, and ideal for sequence pattern extractio
 
 ---
 
-## ▶️ Quickstart
+## ▶️ Quickstart (For Reviewers)
 
 ```bash
 pip install -r requirements.txt
