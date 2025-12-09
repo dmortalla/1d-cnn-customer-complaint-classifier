@@ -10,28 +10,47 @@
 
 ---
 
-## 🚀 Overview
-
-This project implements a **Convolutional Neural Network for text classification**:
-
-- Token embeddings processed through **Conv1d**  
-- ReLU activation + pooling for feature extraction  
-- Fully connected classifier head  
-- Weighted loss for class imbalance  
-- GPU-accelerated training loop  
-
-This architecture is fast, lightweight, and ideal for sequence pattern extraction.
-
----
-
-## ▶️ Quickstart (For Reviewers)
+## 🚀 Quickstart Demo
 
 ```bash
 pip install -r requirements.txt
-python train_1d_cnn.py
+python run_demo.py
+```
 
-train_1d_cnn.py
-requirements.txt
+Runs an end-to-end example using a sample complaint for inference.
+
+---
+
+## 📁 Files
+
+```text
+train_cnn_classifier.py   # Full supervised training script
+run_demo.py               # Sample inference demo
+requirements.txt          # Dependencies
+```
+
+---
+
+## 🏗 Overview
+
+- Token embedding layer  
+- 1D convolutional feature extractor  
+- Global max pooling layer  
+- Fully connected classification head  
+- Cross-entropy loss + accuracy tracking  
+
+This design balances speed, simplicity, and performance for text classification.
+
+---
+
+## 📂 Project Structure
+
+```text
+.
+├── train_cnn_classifier.py
+├── run_demo.py
+├── requirements.txt
+└── CONTRIBUTING.md
 ```
 
 ---
@@ -93,5 +112,10 @@ Embedding layer -> [batch, seq_len, embed_dim]
 
 ---
 
-## 📜 License
-This project is licensed under the MIT License — see the LICENSE file for details.
+## 🤝 Contributing
+See CONTRIBUTING.md for guidelines on code style and submitting pull requests.
+
+---
+
+## 📄 License
+MIT License. See `LICENSE` for details.
